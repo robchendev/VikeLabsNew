@@ -4,7 +4,7 @@ import { GitHubButton, UnChecked } from './styles'
 
 const LinkBtn = ({ github }) => {
   return (
-    <a href={`https://github.com/${github}`}>
+    <a target="_blank" href={`https://github.com/${github}`}>
       <GitHubButton onClick={(e) => e.stopPropagation()}>
         <UnChecked><FaGithub /></UnChecked>
       </GitHubButton>
