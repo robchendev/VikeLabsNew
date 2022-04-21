@@ -46,6 +46,7 @@ const SearchBar = ({ title, slug, description, placeholder, data }) => {
           <Search>
             <input 
               ref={terminalInput}
+              autocomplete="off"
               id="terminal"
               placeholder={placeholder} 
               type="text" 
