@@ -7,7 +7,7 @@ export const SSidebar = styled.div`
   min-width: ${v.sidebarWidth};
   width: ${v.sidebarWidth};
   background: var(--color-background, ${COLORS.background.light});
-  border-radius: calc(${v.borderRadius} * 2);
+  border-radius: 0; //calc(${v.borderRadius} * 2);
   padding: ${v.smSpacing} ${v.mdSpacing};
   font-family: 'Fira Code', monospace;
   font-weight: 500;
@@ -16,7 +16,7 @@ export const SSidebar = styled.div`
   width: 25%;
   ${maxq[1]} {
     margin-top: calc(${v.lgSpacing} * 2);
-    border-radius: calc(${v.borderRadius} * 2);
+    border-radius: 0; //calc(${v.borderRadius} * 2);
     width: 90%;
   }
 `
