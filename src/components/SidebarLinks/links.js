@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa'
 
 export const internalLinks = [
   {
-    label: "Home",
+    label: "$HOME",
     icon: <HiOutlineHome />,
     link: "/"
   },

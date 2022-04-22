@@ -29,7 +29,7 @@ export const SDivider = styled.div`
 export const SLinkContainer = styled.div`
   background: ${({ isActive }) => (!isActive ? `none` : `var(--color-primary, ${COLORS.primary.light})`)};
   color: ${({ isActive }) => (!isActive ? `var(--color-text, ${COLORS.text.light})` : COLORS.buttonText)};
-  border-radius: ${v.borderRadius};
+  border-radius: 0; //${v.borderRadius};
   margin: 6px 0;
   :hover {
     box-shadow: inset 0 0 0 1px var(--color-background2, ${COLORS.background2.light});
