@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Octokit } from "@octokit/core";
-import secrets from '../../../secrets/secrets.json'
 import { Author, AuthorDate, CommitData, CommitMessage } from './styles';
 
 
 const LastCommit = ({ github }) => {
 
   const [commit, setCommits] = useState({});
-  const octokit = new Octokit({ auth: secrets.token });
+  const octokit = new Octokit();
 
   useEffect(() => {
     async function getRequest () {
