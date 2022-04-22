@@ -1,6 +1,6 @@
 import React from 'react'
 import { HiOutlineCode, HiOutlineUserGroup, HiOutlineHome, HiOutlineBookOpen } from "react-icons/hi"
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaDiscord } from 'react-icons/fa'
 
 export const internalLinks = [
   {
@@ -29,5 +29,10 @@ export const externalLinks = [
     label: "GitHub",
     icon: <FaGithub />,
     link: "https://github.com/vikelabs/",
+  },
+  {
+    label: "Discord",
+    icon: <FaDiscord />,
+    link: "https://discord.gg/FcpU2Xm5dD",
   },
 ]
