@@ -1,21 +1,30 @@
 import React from 'react'
 import { ResultLink, ResultContainer, ResultBlock, Title, Excerpt, LinkBtnContainer, MetaContainer } from './styles'
 import LinkBtn from '../LinkBtn/LinkBtn'
+import LastCommit from '../LastCommit/LastCommit'
 
 const SearchResult = ({ title, description, link }) => {
-  console.log(link)
+  let pageName = "Project not found"
+  if (title !== null) {
+    pageName = title
+  }
   return (
-    <React.Fragment key={title}>
-      <ResultLink to={title.toLowerCase().replaceAll(" ","-")}>
+    <React.Fragment key={pageName}>
+      <ResultLink to={pageName.toLowerCase().replaceAll(" ","-")}>
         <ResultContainer>
           <ResultBlock>
             <MetaContainer>
-              <Title>{title}</Title>
+              <Title>{pageName}</Title>
               <Excerpt>{description}</Excerpt>
+              { typeof link !== 'undefined' && 
+                <LastCommit github={link} />
+              }
             </MetaContainer>
             { typeof link !== 'undefined' &&
               <LinkBtnContainer>
-                <LinkBtn github={link} />
+                {link !== null && 
+                  <LinkBtn github={link} />
+                }
               </LinkBtnContainer>
             }
           </ResultBlock>

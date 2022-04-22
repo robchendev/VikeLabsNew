@@ -2,7 +2,7 @@
 type: project
 title: Degree Planner
 description: "A test description that would be around the same length as any other description in the projects folder"
-github: vikelabs
+github: degree-planner
 members: [
   {
     name: teammate1,

@@ -12,7 +12,7 @@ export const GitHubButton = styled.button`
   align-items: center;
   width: 100%;
   height: 100%;
-  padding-top: 10px;
+  padding-top: 12px;
   border: none;
   background: transparent;
   border-radius: ${v.borderRadius};

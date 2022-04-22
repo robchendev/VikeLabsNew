@@ -3,7 +3,6 @@ import { Green, Search, WBColor, SigilCD, TerminalContainer, Purple, ColoredPart
 import SearchResult from '../SearchResult/SearchResult'
 
 const SearchBar = ({ title, slug, description, placeholder, data }) => {
-  console.log(data)
   const [filteredData, setFilteredData] = useState(data);
   const handleFilter = (event) => {
 
@@ -32,7 +31,7 @@ const SearchBar = ({ title, slug, description, placeholder, data }) => {
   }, []);
   return (
     <div>
-      <WindowHeader>_ O X</WindowHeader>
+      <WindowHeader />
       <TerminalContainer>
         <span>
           <ProjectsText>{title}</ProjectsText>
@@ -46,7 +45,7 @@ const SearchBar = ({ title, slug, description, placeholder, data }) => {
           <Search>
             <input 
               ref={terminalInput}
-              autocomplete="off"
+              autoComplete="off"
               id="terminal"
               placeholder={placeholder} 
               type="text" 
