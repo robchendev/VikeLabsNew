@@ -2,7 +2,7 @@
 type: project
 title: Passr
 description: "A test description that would be around the same length as any other description in the projects folder"
-github: vikelabs
+github: passr
 members: [
   {
     name: teammate1,

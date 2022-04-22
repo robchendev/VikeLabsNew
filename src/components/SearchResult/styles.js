@@ -8,7 +8,6 @@ export const ResultLink = styled(Link)`
 `
 export const ResultBlock = styled.div`
   background: var(--color-background, ${COLORS.background.light});
-  border-radius: ${v.borderRadius};
   padding: calc(${v.smSpacing} * 1.5) ${v.mdSpacing} calc(${v.smSpacing} * 1.5 + 1px) ${v.mdSpacing};
   margin: 0 0 5px 0;
   position: relative;
@@ -31,7 +30,7 @@ export const MetaContainer = styled.span`
     width: calc(100% - 4em);
   }
 `
-export const Title = styled.h4`
+export const Title = styled.h3`
   font-family: 'Fira Code', monospace; 
   width: calc(100% - 3em);
   ${maxq[1]} {
@@ -40,11 +39,10 @@ export const Title = styled.h4`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin-bottom: 0.1em;
+  margin-bottom: 0;
 `
 export const Excerpt = styled.p`
-  color: var(--color-text, ${COLORS.text.light});
-  opacity: 0.75;
+  color: var(--color-cyan, ${COLORS.cyan.light});
   width: calc(100% - 3em);
   ${maxq[1]} {
     width: calc(100% - 3em);
@@ -52,6 +50,7 @@ export const Excerpt = styled.p`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  margin-bottom: 0 !important; // temporary probably
 `
 export const LinkBtnContainer = styled.div`
   position: absolute;

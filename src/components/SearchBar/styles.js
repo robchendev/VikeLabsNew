@@ -7,6 +7,7 @@ export const WindowHeader = styled.div`
   padding: 3px;
   display: flex;
   justify-content: end;
+  height: 1.2em;
 `
 export const TerminalContainer = styled.div`
   background: var(--color-background, ${COLORS.background.light});
