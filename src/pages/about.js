@@ -61,14 +61,27 @@ const About = () => {
       let numEmptyLines = getNumExtraLineBreaks(content);
       let style = window.getComputedStyle(content, null);
       let fontSize = parseFloat(style.getPropertyValue('font-size'));
-      let fontWidth = 0.6 * fontSize;
+      let fontWidth = 0.64 * fontSize;
       let width = parseFloat(style.getPropertyValue('width'));
-      let charWidth = width / fontWidth;
-      console.log(charWidth);
+      let numCharsInWidth = Math.ceil(width / fontWidth);
+      console.log(numCharsInWidth);
       let rawHTMLStr = content.innerText;
-      let numRawLines = rawHTMLStr.length / charWidth;
-      let numLines = numRawLines - numEmptyLines;
-      return numLines;
+      let wordsArray = rawHTMLStr.split(/\s/g).filter( word => word);
+
+      let charsInLine = 0;
+      let numLines = 0;
+      wordsArray.forEach(word => {
+        let len = word.length + 1;
+        let current = charsInLine + len;
+        if (current > numCharsInWidth) {
+          numLines++;
+          charsInLine = len;
+        }
+        else {
+          charsInLine += len;
+        }
+      });
+      return numLines + numEmptyLines;
     }
     return 0;
   }
