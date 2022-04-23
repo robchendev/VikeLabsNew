@@ -10,7 +10,7 @@ const SearchResult = ({ title, description, link }) => {
   }
   return (
     <React.Fragment key={pageName}>
-      <ResultLink to={pageName.toLowerCase().replaceAll(" ","-")}>
+      <ResultLink to={pageName.toLowerCase().replace(/\ /g, '-')}>
         <ResultContainer>
           <ResultBlock>
             <MetaContainer>

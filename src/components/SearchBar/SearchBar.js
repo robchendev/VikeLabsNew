@@ -7,14 +7,14 @@ const SearchBar = ({ title, slug, description, placeholder, data }) => {
   const handleFilter = (event) => {
 
     // Turns all hypens into spaces (not visible by user)
-    const searchWord = event.target.value.toLowerCase().replaceAll("-"," ")
+    const searchWord = event.target.value.toLowerCase().replace(/-/g, ' ')
     const newFilter = data.filter((value) => (
       value.frontmatter.title?.toLowerCase().includes(searchWord)
     ))
     setFilteredData(newFilter)
 
     // Replace space with hypen and lowercase all chars
-    let newText = document.getElementById('terminal').value.toLowerCase().replaceAll(" ","-")
+    let newText = document.getElementById('terminal').value.toLowerCase().replace(/\ /g, '-')
     document.getElementById('terminal').value = newText
   }
   const terminalInput = useRef(null);
