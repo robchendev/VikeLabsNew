@@ -27,7 +27,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   data.projects.nodes.forEach(node => {
     actions.createPage({
-      path: '/p/' + node.frontmatter.title.toLowerCase().replaceAll(" ","-"),
+      path: '/p/' + node.frontmatter.title.toLowerCase().replace(/\ /g, '-'),
       component: path.resolve('./src/templates/project/project.js'),
       context: {
         title: node.frontmatter.title,
@@ -37,7 +37,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   data.blogs.nodes.forEach(node => {
     actions.createPage({
-      path: '/b/' + node.frontmatter.title.toLowerCase().replaceAll(" ","-"),
+      path: '/b/' + node.frontmatter.title.toLowerCase().replace(/\ /g, '-'),
       component: path.resolve('./src/templates/blog/blog.js'),
       context: {
         title: node.frontmatter.title,
